@@ -1,0 +1,77 @@
+<!-- 
+* File: index.html
+* Author: Vámosi László Ádám
+* Copyright: 2025, Vámosi László Ádám
+* Group: Szoft I-N
+* Date: 2025-04-16
+* GitHub: https://github.com/vamosilaszloadam/
+* Licenc: MIT
+-->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hengfel</title>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container-fluid user-select-none min-vh-100">
+    <h1>Henger</h1>
+    <p>
+      Kör alapú henger felszíne.
+    </p>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-5">
+        <label for="radius" class="form-label">Sugár</label>
+        <div class="input mb-2 d-flex align-items-center">
+          <input type="number" id="radius" class="form-control me-1 shadow" min="0">
+          <select name="radiusSelect" id="radiusSelect" class="form-select-lg shadow">
+            <option value="km">km</option>
+            <option value="m" selected>m</option>
+            <option value="dm">dm</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+          </select>
+        </div>
+        <label for="height" class="form-label">Magasság</label>
+        <div class="input mb-2 d-flex align-items-center">
+          <input type="number" id="height" class="form-control me-1 shadow" min="0">
+          <select name="heightSelect" id="heightSelect" class="form-select-lg shadow">
+            <option value="km">km</option>
+            <option value="m" selected>m</option>
+            <option value="dm">dm</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+          </select>
+        </div>
+        <div>
+          <button id="calcButton" class="btn btn-primary mb-3 shadow">Számít</button>
+        </div>
+        <label for="surface" class="form-label d-block">Felszín</label>
+        <div class="input mb-2 d-flex align-items-center">
+          <input type="number" id="surface" class="form-control me-1 shadow" readonly>
+          <select name="surfaceSelect" id="surfaceSelect" class="form-select-lg shadow">
+            <option value="km">km²</option>
+            <option value="m" selected>m²</option>
+            <option value="dm">dm²</option>
+            <option value="cm">cm²</option>
+            <option value="mm">mm²</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-5">
+        <img src="img.png" alt="henger" class="img-fluid mx-auto d-block opacity-75">
+      </div>
+    </div>
+    <!-- Névjegy -->
+    <div class="about fixed-bottom">
+      Vámosi László Ádám, I-N, 2025-04-16
+    </div>
+  </div>
+  <script src="bootstrap.js"></script>
+  <script src="app.js"></script>  
+</body>
+</html>
